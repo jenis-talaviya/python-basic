@@ -9,3 +9,16 @@
 # The output of the program should be:
 # 18,22,24
 
+import math
+
+C = 50 
+H = 30
+
+input_values = input("Enter comma-separated values for D: ").split(',')
+output_values = []
+
+for D in input_values:
+    Q = math.sqrt((2 * C * int(D)) / H)
+    output_values.append(str(int(Q)))
+
+print(','.join(output_values))

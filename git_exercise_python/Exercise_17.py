@@ -12,3 +12,19 @@
 # ABd1234@1,a F1#,2w3E*,2We3345
 # Then, the output of the program should be:
 # ABd1234@1
+
+import re
+
+def is_valid_password(password):
+    if (6 <= len(password) <= 12 and
+        re.search("[a-z]", password) and
+        re.search("[0-9]", password) and
+        re.search("[A-Z]", password) and
+        re.search("[$#@]", password)):
+        return True
+    return False
+
+# Assuming input is provided as console input
+input_passwords = input("Enter comma-separated passwords: ").split(',')
+valid_passwords = [password for password in input_passwords if is_valid_password(password)]
+print(','.join(valid_passwords))
