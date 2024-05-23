@@ -3,3 +3,7 @@
 
 
 colors = ["Red", "Green", "Black", "Orange"]
+
+clors = list(map(list,colors))
+
+print(clors)
